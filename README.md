@@ -5,5 +5,5 @@
 #Ellory (old man jenkins)- GUI, Head group manager, dankest memer
 #Cooper (dankerest memer)- Scraping for dank memes, assistant group manager
 
-Description:
+#Description:
 A mosaic of dank memes scraped from 4chan specifically /b/ /gif/ and /pol/ with a really cool zoom function.
