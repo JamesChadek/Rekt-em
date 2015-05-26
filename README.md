@@ -1,4 +1,4 @@
-# Rekt-em
+﻿# Rekt-em
 #Job descriptions:
 #James (le epic hamplanet)- Procter of dank memes, group manager
 #Jackson (lowly n3wb)- Sr. Cofy beetch, dank memer, assistant to the group manager
@@ -15,7 +15,7 @@ Short term goals:
   -dank memes
 
 Long term goals:
-  -graduating without features
+  -graduating without Fs
   -moar dank memes
   -the rest (everything) will fall into the hands of Jackson
 
