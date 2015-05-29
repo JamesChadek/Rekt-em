@@ -2,6 +2,7 @@
 ﻿# Rekt-em
 #Job descriptions:
 #James (le epic hamplanet)- Procter of dank memes, group manager
+I'm gonna create the python code to search each website using Scrapy
 #Jackson (lowly n3wb)- Sr. Cofy beetch, dank memer, assistant to the group manager
 #Ellory (old man jenkins)- GUI, Head group manager, dankest memer (Buying gf)
 #Cooper (dankerest memer)- Scraping for dank memes, assistant group manager
