@@ -5,6 +5,7 @@
 I'm gonna create the python code to search each website using Scrapy
 #Jackson (lowly n3wb)- Sr. Cofy beetch, dank memer, assistant to the group manager
 #Ellory (old man jenkins)- GUI, Head group manager, dankest memer (Buying gf)
+Creating GUI for everything
 #Cooper (dankerest memer)- Scraping for dank memes, assistant group manager
 Helping with Scrapy interface with internet
 
