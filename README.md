@@ -6,6 +6,7 @@ I'm gonna create the python code to search each website using Scrapy
 #Jackson (lowly n3wb)- Sr. Cofy beetch, dank memer, assistant to the group manager
 #Ellory (old man jenkins)- GUI, Head group manager, dankest memer (Buying gf)
 #Cooper (dankerest memer)- Scraping for dank memes, assistant group manager
+Helping with Scrapy interface with internet
 
 #Description:
 A mosaic of dank memes scraped from 4chan and other respectable websites specifically /b/ /gif/ and /pol/ with a really cool zoom function. The mosaic will include many dynamic features and be visually appealing. The final build will likely be comprised of this md file only containing this description and a broken GUI that may or may not compile.
