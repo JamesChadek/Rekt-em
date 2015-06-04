@@ -15,17 +15,27 @@ public class mainPannel extends JFrame implements ActionListener{
 		//JLabel main = new JLabel("Hello World");
 		//add(main);
 		//Set pannel attributes
+		this.setLayout(new FlowLayout());
 		this.setSize(650,400);
 		this.setTitle("Internet danker than you can even imagine");
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		
-		JComboBox siteList = new JComboBox(sites);
-		siteList.setSelectedIndex(4);
-		siteList.addActionListener(this);
+		//Combobox for site selection
+		box.setSelectedIndex(0);
+		box.addActionListener(this);
 		//swing stuff
+		add(box);
+		add(dankResponse);
 		this.setVisible(true);
 		
 	}
-	public void actionPerformed(ActionEvent e){}
+	public void actionPerformed(ActionEvent e){
+		JComboBox c=(JComboBox)e.getSource();
+		String m=(String)c.getSelectedItem();
+		switch(m){
+				case "q": System.out.println("hey");
+				break;
+				default: dankResponse.setText("yes");
+		}
+	}
 }
 
