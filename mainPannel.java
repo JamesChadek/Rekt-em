@@ -21,8 +21,8 @@ public class mainPannel extends JFrame implements ActionListener{
 		} catch (IOException e) {
 			System.out.println("fix it fix it fix it fix it fix it fix it fix it fix it fix it");
 		}
-		g.drawImage(img, 50, 50, this);//adds to frame
-		g.drawImage(img, 300, 50, this);
+		g.drawImage(img, 50, 100, this);//adds to frame
+		g.drawImage(img, 300, 100, this);
 	}
 	public static void main(String args[]) {//pannel start
 		new mainPannel();
