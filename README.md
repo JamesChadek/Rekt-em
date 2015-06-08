@@ -2,12 +2,12 @@
 ﻿# Rekt-em
 #Job descriptions:
 #James (le epic hamplanet)- Procter of dank memes, group manager
-I'm gonna create the python code to search each website using Scrapy
+I'm made the Python file that scrapes and stores images from the website given by the Java GUI
 #Jackson (lowly n3wb)- Sr. Cofy beetch, dank memer, assistant to the group manager
 #Ellory (old man jenkins)- GUI, Head group manager, dankest memer (Buying gf)
 Creating GUI for everything
 #Cooper (dankerest memer)- Scraping for dank memes, assistant group manager
-Helping with Scrapy interface with internet
+Helped create and streamline the Python scraping file
 
 #Description:
 A mosaic of dank memes scraped from 4chan and other respectable websites specifically /b/ /gif/ and /pol/ with a really cool zoom function. The mosaic will include many dynamic features and be visually appealing. The final build will likely be comprised of this md file only containing this description and a broken GUI that may or may not compile.
