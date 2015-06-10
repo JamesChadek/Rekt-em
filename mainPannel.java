@@ -87,7 +87,7 @@ public class mainPannel extends JFrame implements ActionListener{
 				dankResponse.setText("error.jpeg");
 				break;
 		}
-		//repaint();
+		repaint();
 		writer.close();
 	}
 }
