@@ -26,11 +26,11 @@ public class mainPannel extends JFrame implements ActionListener{
 		} catch (IOException e) {
 			System.out.println("No website selected...yet!");
 		}
-
+		int x=(int)((650-img.getWidth(this))/2);//center!
 		//if(last!=img||first)
 		//{
 			//p.repaint();
-			g.drawImage(img, 200, 100, this);//adds to frame
+			g.drawImage(img, x, 70, this);//adds to frame
 		//}
 		//first=false;
 	}
