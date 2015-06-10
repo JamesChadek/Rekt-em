@@ -20,9 +20,12 @@ public class mainPannel extends JFrame implements ActionListener{
 		try {//reading in
 			img = ImageIO.read(new File("Downloaded_Images/image.png"));
 		} catch (IOException e) {
-			System.out.println("fix it fix it fix it fix it fix it fix it fix it fix it fix it");
+			System.out.println("No website selected...yet!");
 		}
-		g.drawImage(img, 50, 100, this);//adds to frame
+		g.drawImage(img, 200, 100, this);//adds to frame
+		//paint(g);
+		//mainPannel();////////
+		//frameInit();
 	}
 	public static void main(String args[]) {//pannel start
 		new mainPannel();
@@ -83,6 +86,7 @@ public class mainPannel extends JFrame implements ActionListener{
 				dankResponse.setText("error.jpeg");
 				break;
 		}
+		repaint();
 		writer.close();
 	}
 }
