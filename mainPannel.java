@@ -11,6 +11,8 @@ import javax.imageio.*;
 import javax.swing.*;
 public class mainPannel extends JFrame implements ActionListener{
 	static mainPannel p=null;
+	Image last=null;
+	//Boolean first=true;
 	//Combobox init
 	String[] sites={"Google","/b/","/g/","/pol/","Tahoma"};
 	JComboBox box=new JComboBox(sites);
@@ -24,11 +26,13 @@ public class mainPannel extends JFrame implements ActionListener{
 		} catch (IOException e) {
 			System.out.println("No website selected...yet!");
 		}
-		g.drawImage(img, 200, 100, this);//adds to frame
-		//paint(g);
-		//mainPannel();////////
-		//frameInit();
-		p.repaint();
+
+		//if(last!=img||first)
+		//{
+			//p.repaint();
+			g.drawImage(img, 200, 100, this);//adds to frame
+		//}
+		//first=false;
 	}
 	public static void main(String args[]) {//pannel start
 		p=new mainPannel();
