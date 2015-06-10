@@ -1,4 +1,4 @@
-java "mainPannel"
+python "Meh.py"
 
 pause
 del "%0"

@@ -18,7 +18,7 @@ public class mainPannel extends JFrame implements ActionListener{
 	public void paint(Graphics g){//Just for adding images to the JFrame
 		BufferedImage img = null;
 		try {//reading in
-			img = ImageIO.read(new File("image.png"));
+			img = ImageIO.read(new File("Downloaded_Images/image.png"));
 		} catch (IOException e) {
 			System.out.println("fix it fix it fix it fix it fix it fix it fix it fix it fix it");
 		}
