@@ -29,7 +29,8 @@ public class mainPannel extends JFrame implements ActionListener{
 		//frameInit();
 	}
 	public static void main(String args[]) {//pannel start
-		new mainPannel();
+		mainPannel p=new mainPannel();
+		//while(true) p.repaint();
 	}
 	mainPannel() {
 		//Set pannel attributes
@@ -42,10 +43,13 @@ public class mainPannel extends JFrame implements ActionListener{
 		//Combobox for site selection
 		box.setSelectedIndex(0);
 		box.addActionListener(this);
+		//paint(g);
+		
 		//swing stuff
 		add(box);
 		add(dankResponse);
 		this.setVisible(true);
+		//this.repaint();//
 		
 	}
 	@SuppressWarnings("unchecked")
@@ -80,7 +84,7 @@ public class mainPannel extends JFrame implements ActionListener{
 				break;
 				case "Tahoma": 
 				writer.println("http://tahomahigh.com");
-				dankResponse.setText("Glorious");
+				dankResponse.setText("terrible");
 				break;
 				default: 
 				writer.println("suckit");
