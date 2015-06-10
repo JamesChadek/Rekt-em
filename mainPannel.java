@@ -8,6 +8,7 @@ import java.util.*;
 import javax.imageio.*;
 //swing
 import javax.swing.*;
+
 public class mainPannel extends JFrame implements ActionListener{
 	static mainPannel p=null;
 	Image last=null;
@@ -25,7 +26,7 @@ public class mainPannel extends JFrame implements ActionListener{
 		} catch (IOException e) {
 			System.out.println("No website selected...yet!");
 		}
-		int x=(int)((650-img.getWidth(this))/2);//center!
+		int x=(int)((p.getWidth()-img.getWidth(this))/2);//center!
 		//if(last!=img||first)
 		//{
 			//p.repaint();
@@ -45,6 +46,14 @@ public class mainPannel extends JFrame implements ActionListener{
 		this.setIconImage(img.getImage());
 		this.setTitle("Internet danker than you can even imagine");
 		this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		//resize frame action listener
+		this.addComponentListener(new ComponentAdapter() 
+		{  
+			public void componentResized(ComponentEvent evt) {
+				Component c = (Component)evt.getSource();
+				repaint();
+			}
+		});
 		//Combobox for site selection
 		box.setSelectedIndex(0);
 		box.addActionListener(this);
@@ -52,7 +61,6 @@ public class mainPannel extends JFrame implements ActionListener{
 		add(box);
 		add(dankResponse);
 		this.setVisible(true);
-		
 	}
 	@SuppressWarnings("unchecked")//annoying compiler file stuff
 	public void actionPerformed(ActionEvent e){
