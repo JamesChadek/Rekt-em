@@ -4,7 +4,6 @@ import java.awt.event.*;
 import java.awt.image.*;
 //io
 import java.io.*;
-//import java.io.Writer.*;
 import java.util.*;
 import javax.imageio.*;
 //swing
@@ -49,16 +48,13 @@ public class mainPannel extends JFrame implements ActionListener{
 		//Combobox for site selection
 		box.setSelectedIndex(0);
 		box.addActionListener(this);
-		//paint(g);
-		
 		//swing stuff
 		add(box);
 		add(dankResponse);
 		this.setVisible(true);
-		//this.repaint();//
 		
 	}
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings("unchecked")//annoying compiler file stuff
 	public void actionPerformed(ActionEvent e){
 		//dankResponses to website choice
 		JComboBox c=(JComboBox)e.getSource();
@@ -70,7 +66,7 @@ public class mainPannel extends JFrame implements ActionListener{
 		}catch(IOException e2){
 			
 		}
-		//
+		//switch to control watdo
 		switch(m){
 				case "Google": 
 				writer.println("http://google.com");
@@ -97,8 +93,8 @@ public class mainPannel extends JFrame implements ActionListener{
 				dankResponse.setText("error.jpeg");
 				break;
 		}
-		repaint();
-		writer.close();
+		repaint();//rebuffers to prevent after image
+		writer.close();//closes for the sake of ram and safety
 	}
 }
 //Note: Combo box will be on the left side in the final version
