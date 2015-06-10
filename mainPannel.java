@@ -58,13 +58,29 @@ public class mainPannel extends JFrame implements ActionListener{
 		}
 		//
 		switch(m){
-				case "q": 
-				writer.println("hey");
-				dankResponse.setText("yes");
+				case "Google": 
+				writer.println("http://google.com");
+				dankResponse.setText("lame but ok");
+				break;
+				case "/b/": 
+				writer.println("http://4chan.org/b/");
+				dankResponse.setText("won't work at school");
+				break;
+				case "/g/": 
+				writer.println("http://4chan.org/g/");
+				dankResponse.setText("the /g/reatest");
+				break;
+				case "/pol/": 
+				writer.println("http://4chan.org/pol/");
+				dankResponse.setText("Glorious");
+				break;
+				case "Tahoma": 
+				writer.println("http://tahomahigh.com");
+				dankResponse.setText("Glorious");
 				break;
 				default: 
-				writer.println("hey");
-				dankResponse.setText("yes");
+				writer.println("suckit");
+				dankResponse.setText("error.jpeg");
 				break;
 		}
 		writer.close();
