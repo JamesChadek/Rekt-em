@@ -4,11 +4,11 @@ import java.awt.event.*;
 import java.awt.image.*;
 //io
 import java.io.*;
-//import java.io.Writer.*;
 import java.util.*;
 import javax.imageio.*;
 //swing
 import javax.swing.*;
+
 public class mainPannel extends JFrame implements ActionListener{
 	static mainPannel p=null;
 	Image last=null;
@@ -26,11 +26,11 @@ public class mainPannel extends JFrame implements ActionListener{
 		} catch (IOException e) {
 			System.out.println("No website selected...yet!");
 		}
-
+		int x=(int)((p.getWidth()-img.getWidth(this))/2);//center!
 		//if(last!=img||first)
 		//{
 			//p.repaint();
-			g.drawImage(img, 200, 100, this);//adds to frame
+			g.drawImage(img, x, 70, this);//adds to frame
 		//}
 		//first=false;
 	}
@@ -46,19 +46,23 @@ public class mainPannel extends JFrame implements ActionListener{
 		this.setIconImage(img.getImage());
 		this.setTitle("Internet danker than you can even imagine");
 		this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		//resize frame action listener
+		this.addComponentListener(new ComponentAdapter() 
+		{  
+			public void componentResized(ComponentEvent evt) {
+				Component c = (Component)evt.getSource();
+				repaint();
+			}
+		});
 		//Combobox for site selection
 		box.setSelectedIndex(0);
 		box.addActionListener(this);
-		//paint(g);
-		
 		//swing stuff
 		add(box);
 		add(dankResponse);
 		this.setVisible(true);
-		//this.repaint();//
-		
 	}
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings("unchecked")//annoying compiler file stuff
 	public void actionPerformed(ActionEvent e){
 		//dankResponses to website choice
 		JComboBox c=(JComboBox)e.getSource();
@@ -70,7 +74,7 @@ public class mainPannel extends JFrame implements ActionListener{
 		}catch(IOException e2){
 			
 		}
-		//
+		//switch to control watdo
 		switch(m){
 				case "Google": 
 				writer.println("http://google.com");
@@ -97,8 +101,8 @@ public class mainPannel extends JFrame implements ActionListener{
 				dankResponse.setText("error.jpeg");
 				break;
 		}
-		repaint();
-		writer.close();
+		repaint();//rebuffers to prevent after image
+		writer.close();//closes for the sake of ram and safety
 	}
 }
 //Note: Combo box will be on the left side in the final version
