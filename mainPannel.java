@@ -10,6 +10,7 @@ import javax.imageio.*;
 //swing
 import javax.swing.*;
 public class mainPannel extends JFrame implements ActionListener{
+	static mainPannel p=null;
 	//Combobox init
 	String[] sites={"Google","/b/","/g/","/pol/","Tahoma"};
 	JComboBox box=new JComboBox(sites);
@@ -27,9 +28,10 @@ public class mainPannel extends JFrame implements ActionListener{
 		//paint(g);
 		//mainPannel();////////
 		//frameInit();
+		p.repaint();
 	}
 	public static void main(String args[]) {//pannel start
-		mainPannel p=new mainPannel();
+		p=new mainPannel();
 		//while(true) p.repaint();
 	}
 	mainPannel() {
