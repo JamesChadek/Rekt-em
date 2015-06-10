@@ -4,13 +4,14 @@ import java.awt.event.*;
 import java.awt.image.*;
 //io
 import java.io.*;
+//import java.io.Writer.*;
 import java.util.*;
 import javax.imageio.*;
 //swing
 import javax.swing.*;
 public class mainPannel extends JFrame implements ActionListener{
 	//Combobox init
-	String[] sites={"meme center","/b/","/g/","/pol/","string"};
+	String[] sites={"Google","/b/","/g/","/pol/","Tahoma"};
 	JComboBox box=new JComboBox(sites);
 	JLabel dankResponse=new JLabel();
 	
@@ -22,7 +23,6 @@ public class mainPannel extends JFrame implements ActionListener{
 			System.out.println("fix it fix it fix it fix it fix it fix it fix it fix it fix it");
 		}
 		g.drawImage(img, 50, 100, this);//adds to frame
-		g.drawImage(img, 300, 100, this);
 	}
 	public static void main(String args[]) {//pannel start
 		new mainPannel();
@@ -44,15 +44,30 @@ public class mainPannel extends JFrame implements ActionListener{
 		this.setVisible(true);
 		
 	}
+	@SuppressWarnings("unchecked")
 	public void actionPerformed(ActionEvent e){
 		//dankResponses to website choice
 		JComboBox c=(JComboBox)e.getSource();
 		String m=(String)c.getSelectedItem();
-		switch(m){
-				case "q": System.out.println("hey");
-				break;
-				default: dankResponse.setText("yes");
+		//out file
+		PrintWriter writer=null;
+		try{
+			writer= new PrintWriter("info.file", "UTF-8");
+		}catch(IOException e2){
+			
 		}
+		//
+		switch(m){
+				case "q": 
+				writer.println("hey");
+				dankResponse.setText("yes");
+				break;
+				default: 
+				writer.println("hey");
+				dankResponse.setText("yes");
+				break;
+		}
+		writer.close();
 	}
 }
 //Note: Combo box will be on the left side in the final version
