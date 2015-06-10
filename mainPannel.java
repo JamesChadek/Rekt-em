@@ -16,6 +16,7 @@ public class mainPannel extends JFrame implements ActionListener{
 	JLabel dankResponse=new JLabel();
 	
 	public void paint(Graphics g){//Just for adding images to the JFrame
+		super.paint(g);
 		BufferedImage img = null;
 		try {//reading in
 			img = ImageIO.read(new File("Downloaded_Images/image.png"));
@@ -86,7 +87,7 @@ public class mainPannel extends JFrame implements ActionListener{
 				dankResponse.setText("error.jpeg");
 				break;
 		}
-		repaint();
+		//repaint();
 		writer.close();
 	}
 }
